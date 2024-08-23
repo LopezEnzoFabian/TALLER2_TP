@@ -30,7 +30,7 @@ namespace PequeñoFormulario
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

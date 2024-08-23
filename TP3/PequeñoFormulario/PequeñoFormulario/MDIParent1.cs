@@ -24,7 +24,7 @@ namespace PequeñoFormulario
 
             Form childForm = new Form1();
             childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
+            childForm.Text = "Pequeño Formulario";
             childForm.Show();
         }
 
