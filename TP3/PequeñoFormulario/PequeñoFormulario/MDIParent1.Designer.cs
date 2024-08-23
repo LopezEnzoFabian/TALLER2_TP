@@ -537,9 +537,9 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MDIParent1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Pequeño Sistema";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Text = "MDIParent1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MDIParent1_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);

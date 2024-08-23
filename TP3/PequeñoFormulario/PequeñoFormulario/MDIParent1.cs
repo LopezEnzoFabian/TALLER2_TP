@@ -21,7 +21,8 @@ namespace PequeñoFormulario
 
         private void ShowNewForm(object sender, EventArgs e)
         {
-            Form childForm = new Form();
+
+            Form childForm = new Form1();
             childForm.MdiParent = this;
             childForm.Text = "Ventana " + childFormNumber++;
             childForm.Show();
@@ -102,6 +103,11 @@ namespace PequeñoFormulario
             {
                 childForm.Close();
             }
+        }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
