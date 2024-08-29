@@ -48,14 +48,15 @@ namespace PequeñoFormulario
                 txtDNI.Clear();
                 txtAPE.Clear();
                 txtNOM.Clear();
+                lblmodif.Text = "modificar";
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtDNI.Text) ||
-        string.IsNullOrWhiteSpace(txtAPE.Text) ||
-        string.IsNullOrWhiteSpace(txtNOM.Text))
+                string.IsNullOrWhiteSpace(txtAPE.Text) ||
+                string.IsNullOrWhiteSpace(txtNOM.Text))
             {
                 // Mostrar un mensaje de error
                 MessageBox.Show("Debe Completar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -68,7 +69,7 @@ namespace PequeñoFormulario
                 if (ask == DialogResult.Yes)
                 {
                     // Si el usuario hizo clic en "Sí"
-                    lblmodif.Text = "¡Los datos han sido guardados!";
+                    lblmodif.Text = txtAPE.Text +" " +txtNOM.Text;
 
                     string nombreCompleto = $"{txtNOM.Text} {txtAPE.Text}";
                     MessageBox.Show($"El Cliente: {nombreCompleto} se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -76,7 +77,7 @@ namespace PequeñoFormulario
                 else if (ask == DialogResult.No)
                 {
                     // Si el usuario hizo clic en "No"
-                    lblmodif.Text = "Operación cancelada.";
+                    lblmodif.Text = "modificar";
                 }
             }
 

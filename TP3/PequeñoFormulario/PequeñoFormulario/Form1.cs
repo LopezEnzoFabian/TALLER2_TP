@@ -59,6 +59,7 @@ namespace PequeñoFormulario
                     txtAPE.Clear();
                     txtNOM.Clear();
                     txtTEL.Clear();
+                    lblmodif.Text = "modificar";
                 }
             }
                
@@ -82,7 +83,7 @@ namespace PequeñoFormulario
                 if (ask == DialogResult.Yes)
                 {
                     // Si el usuario hizo clic en "Sí"
-                    lblmodif.Text = "¡Los datos han sido guardados!";
+                    lblmodif.Text = txtNOM.Text +" " +txtAPE.Text;
 
                     string nombreCompleto = $"{txtNOM.Text} {txtAPE.Text}";
                     MessageBox.Show($"El Cliente: {nombreCompleto} se insertó correctamente", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,7 +91,7 @@ namespace PequeñoFormulario
                 else if (ask == DialogResult.No)
                 {
                     // Si el usuario hizo clic en "No"
-                    lblmodif.Text = "Operación cancelada.";
+                    lblmodif.Text = "modificar";
                 }
             }
 
