@@ -51,5 +51,10 @@ namespace Formulario_DG
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
